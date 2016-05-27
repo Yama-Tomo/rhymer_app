@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>rhyme creator</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="wrap">
+    <div class="container">
+      <%= yield %>
+    </div>
+    <div class="footer">
+        Created by Yama-Tomo. Powerd by <a href="https://github.com/suzuki86/rhymer">rhymer gem.</a>
+    </div>
+  </div>
+</body>
+</html>

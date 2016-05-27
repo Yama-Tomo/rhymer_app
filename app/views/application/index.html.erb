@@ -1,0 +1,44 @@
+<div id="title">
+  Rhyme creator
+  <div class="sub-title">文章を入力して create ボタンを押すとなんとなくそれっぽい rhyme が生成されます</div>
+  <div class="sub-title">文章が思いつかない引き出しの少ないそんなあなたには wikipedia 先生から文章を拝借して作ってみよう</div>
+  <div class="sub-title">イケてる rhyme を生成してドヤ顔をキメろ！</div>
+</div>
+<div id="rhyme" class="well well-sm" style="display:none">
+  <div class="error">それじゃ audience は沸かないぜ！</div>
+  <div class="success"></div>
+</div>
+<form id="main-form">
+  <textarea name="text" class="form-control" rows="8" placeholder="ここに文章を入力..."><%= @text %></textarea>
+</form>
+<br>
+<div class="pull-right">
+  <button class="btn btn-default" id="clear_text">clear text</button>
+  <button class="btn btn-default" id="random_text">wikipedia 先生から文章を拝借</button>
+</div>
+<div class="clearfix"></div>
+<br>
+<div class="pull-right">
+  <button class="btn btn-primary" id="create">create</button>
+</div>
+<div class="clearfix"></div>
+<br>
+<div class="pull-right">
+  <button class="btn btn-success" id="share"><span class="glyphicon glyphicon-share"></span> share</button>
+</div>
+<div class="clearfix"></div>
+<div class="share" style="display: none">
+  <span class="caution">このURLは3日間有効です</span>
+  <div class="well well-sm">
+      <span class="label">URL</span>
+      <span class="url"></span>
+  </div>
+</div>
+<br>
+<% if @text != nil %>
+<script type="text/javascript">
+$(function() {
+  app.ele.$btn_create.trigger('click');
+});
+</script>
+<% end %>
